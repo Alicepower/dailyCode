@@ -1,0 +1,278 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.topdiv {
+    width: 100%;
+    height: 100px;
+
+}
+.wen{
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+}
+.wen:hover{
+    color: #e4393c;
+    text-decoration: underline;
+}
+.icons{
+    width: 16px;
+    height: 16px;
+    background: url("../image/icon-tips.png");
+    background-repeat: no-repeat;
+}
+.privacy{
+    background: #fff8f0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    display: inline-block;
+}
+.content{
+    width: 100%;
+    height: 475px;
+    background: #e93854;
+}
+.bottom a{
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 25px;
+    margin-top: 20px;
+    display: inline-block;
+    color: #666;
+}
+.bottom a:hover{
+    text-decoration: underline;
+    color: #e93854;
+}
+.sccode{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.acclogin{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 70px;
+    font-size: 20px;
+}
+.divimage{
+    background-color: #e93854;
+    background: url("../image/5ac46d12Nf5b53b55.jpg") 0px 0px no-repeat;
+}
+
+
+.bgdiv {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 475px;
+    margin-top:100px;
+    background: #e93854;
+}
+
+.loginui {
+    background-color: white;
+    width: 350px;
+    height: 450px;
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 20px;
+}
+
+.sccode {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 20px;
+}
+.hovers{
+    color: #333;text-decoration: none
+}
+.hovers:hover{
+    color: #e93854;
+}
+.acclogin {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 100px;
+    font-size: 20px;
+}
+
+.qr-coagent li b {
+    width: 25px;
+    height: 25px;
+    display: block;
+    background: url("../image/qr-coagent.png") no-repeat;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+}
+
+.coagent {
+    width: 300px;
+
+}
+
+.coagent li {
+    float: left;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+
+}
+
+.qr-coagent li b {
+    width: 25px;
+    height: 25px;
+    background: url("../image/qr-coagent.png") no-repeat;
+    margin-top: 20px;
+}
+
+.qr-coagent li .faster {
+    background-position: -27px;
+}
+
+.qr-coagent li .more-safe {
+    background-position: -54px;
+}
+
+.qr-coagent li p {
+    padding-left: 32px;
+    font-style: normal;
+    padding-top: 20px;
+}
+
+.qr-coagent li {
+    text-align: left;
+    position: relative;
+    margin-right: 18px;
+}
+
+em {
+    font-style: normal;
+}
+
+/**/
+
+.qr-coagent01 li b {
+    width: 20px;
+    height: 18px;
+    display: block;
+    background: url("../image/QQ-weixin.png") no-repeat;
+    position: absolute;
+
+}
+
+.coagent01 {
+    width: 300px;
+}
+
+.coagent01 li {
+    float: left;
+
+
+
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+
+}
+
+.qr-coagent01 li b {
+    width: 20px;
+    height: 18px;
+    background: url("../image/QQ-weixin.png") no-repeat;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.qr-coagent01 li .weixin {
+    background-position: -20px;
+}
+
+.qr-coagent01 li p {
+    padding-left: 32px;
+    font-style: normal;
+    padding-top: 20px;
+}
+
+.qr-coagent01 li {
+    text-align: left;
+    position: relative;
+    margin-right: 18px;
+
+}
+
+.button {
+    border: 1px solid #e85356;
+    display: block;
+    width: 260px;
+    background: #e4393c;
+    height: 31px;
+    line-height: 31px;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 60px;
+    margin-left: 40px;
+  outline: none;
+}
+.names{
+    height: 18px;
+    padding: 10px 0 10px 50px;
+    width: 245px;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.pwds{
+    height: 18px;
+    padding: 10px 0 10px 50px;
+    width: 245px;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+.labelname{
+    background: url("../image/pwd-icons-new.png") no-repeat;
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    margin-top: 52px;
+    margin-left: 20px;
+    border-right: 1px solid #bdbdbd;
+
+}
+.labelpwd{
+    background: url("../image/pwd-icons-new.png") no-repeat;
+    background-position: -50px 0;
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    margin-top: 22px;
+    margin-left: 25px;
+    border-right: 1px solid #bdbdbd;
+
+}
+
+.jia:hover{
+    background: url("../image/phone-orange.png");
+}
+/*
+.sccode:hover{
+    color: #e85356;
+}
+.acclogin:hover{
+    color: #e85356;
+}*/

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东-欢迎登录</title>
+    <meta name="keywords" content="前端 琉璃子" />
+    <meta name="description" content="琉璃子个人简介" />
+    <link rel="stylesheet" href="css/login01.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#saoma").click(function () {
+                $("#ershow").show();
+                $("#accshow").hide();
+            });
+
+            $("#acc").click(function () {
+                $("#accshow").show();
+                $("#ershow").hide();
+            });
+
+        });
+    </script>
+</head>
+<body>
+<div class="top">
+    <div class="topdiv">
+        <img src="image/login.png" alt="" style="margin-left:260px;margin-top: 10px">
+        <span style="font-size: 25px;margin-left: 30px">欢迎登录</span>
+
+        <div style="display: inline-block;margin-left: 500px">
+            <img src="image/q-icon.png" alt="">
+            <a href="#" class="wen">登录界面 调查问卷</a>
+
+        </div>
+    </div>
+
+    <div class="privacy">
+        <i class="icons"></i>
+        <p style="vertical-align: middle;color: #999;font-size: 12px;display: inline-block;">
+            依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版<a href="#" class="black" target="_blank" style="color: #333;
+    text-decoration: none;">《京东隐私政策》</a>已上线，将更有利于保护您的个人隐私。</p>
+    </div>
+
+</div>
+<div class="content">
+
+    <div class="divimage"></div>
+
+
+    <div class="bgdiv">
+        <img src="image/5aa68632Nd7790d0c.png" alt="" style="margin-left: 100px;position: absolute">
+
+        <div class="loginui">
+            <div style="width: 350px;height: 30px;background:#fff8f0;display: inline-block">
+                <p style="font-size: 12px;color: #999;line-height: 30px;text-align: center">京东不会以任何理由要求您转账汇款，谨防诈骗</p>
+            </div>
+       <div class="sccode" id="saoma">
+                扫码登录
+                <a href="" class="hovers"></a>
+            </div>
+            <div class="acclogin" id="acc">
+                账户登录
+                <a href="" class="hovers"></a>
+            </div>
+            <hr style="height:2px;border:none;border-top:1px double #efefef;margin-top: 10px">
+
+
+                <div id="ershow" style="margin-top: 30px;text-align: center;">
+                    <div style="border: 1px solid #efefef;width: 180px;height: 180px;margin-left: 80px">
+                        <img src="image/ercode.png" alt="" style="margin-top: 18px;">
+                        <p style="font-size: 12px;margin-top: 30px">打开
+                            <a href="" style="text-decoration: none;color: #e93854">手机京东</a>
+                            扫描二维码</p>
+                    </div>
+                    <div class="coagent qr-coagent" id="qrCoagent" style="margin-left:50px;margin-top: 30px">
+                        <ul>
+                            <li><b></b>
+                                <p>免输入</p></li>
+                            <li><b class="faster"></b>
+                                <p>更快&nbsp;</p></li>
+                            <li><b class="more-safe"></b>
+                                <p>更安全</p></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="accshow" style="display: none">
+                    <div>
+                        <label for="name" class="labelname"></label>
+                        <input type="text" id="name" class="names" placeholder="邮箱/用户名/已验证手机">
+                    </div>
+
+                    <div>
+                        <label for="pwd" class="labelpwd"></label>
+                        <input type="text" id="pwd" class="pwds" placeholder="密码">
+                    </div>
+                    <div style="float: right;margin-right: 30px;margin-top: 20px"><a href=""
+                                                                                     style="color: #666;font-size: 14px">忘记密码</a>
+                    </div>
+                    <a href="#" style="text-decoration: none"><button class="button">登录</button></a>
+                </div>
+
+
+                <div class="coagent01 qr-coagent01">
+                    <ul>
+                        <li style="margin-left: 20px;margin-top: 20px"><b></b>
+                            <p>QQ</p></li>
+                        <li style="margin-left: 20px;margin-top: 20px"><b class="weixin"></b>
+                            <p>微信</p></li>
+                        <li>
+                            <a href=""
+                               style="color: #b61d1d;font-size: 16px;display: block;margin-top: 40px;text-decoration: none;">立即注册</a>
+                        </li>
+                    </ul>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</div>
+<div class="bottom">
+    <a href="" style="margin-left: 300px"> 关于我们</a>
+    <a href="" rel="nofollow">联系我们</a>
+    <a href="" rel="nofollow">人才招聘 </a>
+    <a href="" rel="nofollow">商家入住 </a>
+    <a href="" rel="nofollow">广告服务</a>
+    <a href="" rel="nofollow">手机京东 </a>
+    <a href="" rel="nofollow">友情链接</a>
+    <a href="" rel="nofollow">销售联盟</a>
+    <a href="" rel="nofollow">京东社区 </a>
+    <a href="" rel="nofollow">京东公益</a>
+    <a href="" rel="nofollow">English Site</a>
+
+    <p style="font-size: 12px;margin-left: 530px;margin-top: 10px;color: #666">Copyright © 2004-2018 京东JD.com 版权所有</p>
+</div>
+
+</body>
+</html>

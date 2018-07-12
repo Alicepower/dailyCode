@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" id="dt">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="前端 琉璃子" />
+    <meta name="description" content="琉璃子个人简介" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <title>表格操作</title>
+
+
+    <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+    <style>
+        input{
+            width: 80px;
+            height: 20px;
+        }
+        .tables {
+            font-family: verdana, arial, sans-serif;
+            font-size: 16px;
+            color: #333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+            margin-left:300px;
+
+
+        }
+
+
+
+
+        .tables th {
+
+            border-width: 1px;
+            padding: 10px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #f5f5f5;
+        }
+
+        .tables td {
+            border-width: 1px;
+            padding: 10px;
+            border-style: solid;
+            border-color: #666666;
+            text-align: center;
+            background-color: #ffffff;
+
+
+            /*fb0f3a;
+            onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';"
+            */
+        }
+
+        .btn{
+            width: 80px;
+            height: 30px;
+            margin-top: 10px;
+            line-height: 30px;
+            text-align: center;
+            margin-left: 10px;
+            color: #fff;
+            border: 0;
+            font-size: 16px;
+            text-align: center;
+            display: inline-block;
+            cursor: pointer;
+            box-sizing: border-box;
+            border-radius: 1.5rem;
+            background: -webkit-linear-gradient(left, #24e9f0 , #2564ef);
+            background: -o-linear-gradient(right, #24e9f0 , #2564ef);
+            background: -moz-linear-gradient(right, #24e9f0 , #2564ef);
+            background: linear-gradient(to right, #24e9f0 , #2564ef);
+            /* box-shadow: 0 0.3rem 0.566666666666rem rgba(112,206,232,0.3); */
+            outline: none;
+        }
+
+        .ulitem{
+            list-style: none;
+        }
+        .ulitem li{
+            display: inline-block;
+        }
+    </style>
+
+    <script>
+
+        var dt = document.getElementById("dt");
+
+        var data;
+
+        var hanghao = 1;
+
+        function init() {
+
+            data = document.getElementById("data");
+
+        }
+
+        function tianjia(bianhao, xingming, chuohao, fen, size, file,link,status) {
+
+            var rows = data.rows;
+
+            for (var i = 0; i < rows.length; i++) {
+
+                if (bianhao == rows[i].cells[0].innerText) {
+
+                    window.alert("已经存在该编号的用户，请重新输入");
+
+                    return;
+
+                }
+
+            }
+
+            var atr = data.insertRow(rows.length);
+
+            var tda = atr.insertCell();
+
+            var tdb = atr.insertCell();
+
+            var tdc = atr.insertCell();
+
+            var tdd = atr.insertCell();
+            var tde = atr.insertCell();
+            var tdf = atr.insertCell();
+            var links = atr.insertCell();
+            var statuss = atr.insertCell();
+            var tdg = atr.insertCell();
+
+
+
+
+            atr.id = "tr" + hanghao;
+
+            tda.innerText = bianhao;
+
+            tdb.innerText = xingming;
+
+            tdc.innerText = chuohao;
+            tdd.innerText = fen;
+            tde.innerText = size;
+            tdf.innerText = file;
+            links.innerText = link;
+            statuss.innerText = status;
+
+            tdg.innerHTML = "<button class='btn'  onclick=\"xiugai('" + atr.id + "')\">修改</button>" +
+                "<button class='btn'  onclick=\"deletearow('" + atr.id + "')\">删除</button>"+"<button class='btn'  onclick=\"deletearow('\" + atr.id + \"')\">置顶</button>";
+
+            hanghao++;
+
+        }
+
+        function xiugai(atrid) {
+
+            var xuhao = document.getElementById("xuhao");
+
+            var xingming = document.getElementById("xingming");
+
+            var chuohao = document.getElementById("chuohao");
+
+            var rows = data.rows;
+
+            for (var i = 0; i < rows.length; i++) {
+
+                var atr = rows[i];
+
+                if (atr.id == atrid) {
+
+
+                    var a = atr.cells[0].innerText;
+
+                    var b = atr.cells[1].innerText;
+
+                    var c = atr.cells[2].innerText;
+                    var d = atr.cells[3].innerText;
+                    var e = atr.cells[4].innerText;
+                    var f = atr.cells[5].innerText;
+                    var h = atr.cells[6].innerText;
+                    var i = atr.cells[7].innerText;
+
+                    document.getElementById("xuhao").value = a;
+
+                    document.getElementById("xingming").value = b;
+
+                    document.getElementById("chuohao").value = c;
+                    document.getElementById("fen").value = d;
+                    document.getElementById("size").value = e;
+                    document.getElementById("file").value = f;
+                    document.getElementById("links").value = h;
+                    document.getElementById("statuss").value = i;
+
+                }
+
+            }
+
+        }
+
+        function deletearow(atrid) {
+
+            if (confirm("确定要删除吗？")) {
+
+                var rows = data.rows;
+
+                for (var i = 0; i < rows.length; i++) {
+
+                    var atr = rows[i];
+
+                    if (atr.id == atrid) {
+
+                        data.deleteRow(i);
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        function dotianjia() {
+
+            var xuhao = document.getElementById("xuhao");
+
+            var xingming = document.getElementById("xingming");
+
+            var chuohao = document.getElementById("chuohao");
+            var fen = document.getElementById("fen");
+            var size = document.getElementById("size");
+            var file = document.getElementById("file");
+            var links = document.getElementById("links");
+            var statuss = document.getElementById("statuss");
+
+            //tianjia(xuhao.value, xingming.value, chuohao.value, fen.value, size.value, file.value,links.value,statuss.value);
+            tianjia("001", "ad001", "appBanner", "1920*1080", "150k", "jpg png","www.baidu.com","暂停");
+            tianjia("002", "ad001", "appBanner", "1920*1080", "150k", "jpg png","www.baidu.com","暂停");
+            tianjia("003", "ad001", "appBanner", "1920*1080", "150k", "jpg png","www.baidu.com","暂停");
+            tianjia("004", "ad001", "appBanner", "1920*1080", "150k", "jpg png","www.baidu.com","暂停");
+            tianjia("005", "ad001", "appBanner", "1920*1080", "150k", "jpg png","www.baidu.com","暂停");
+            tianjia("006", "ad001", "appBanner", "1920*1080", "150k", "jpg png","www.baidu.com","暂停");
+            tianjia("007", "ad001", "appBanner", "1920*1080", "150k", "jpg png","www.baidu.com","暂停");
+            tianjia("008", "ad001", "appBanner", "1920*1080", "150k", "jpg png","www.baidu.com","暂停");
+            tianjia("009", "ad001", "appBanner", "1920*1080", "150k", "jpg png","www.baidu.com","暂停");
+
+        }
+
+        function dobaocun() {
+
+            var winname = window.open('', '_blank');
+
+            winname.document.open('text/html', 'replace');
+
+            var code = document.getElementById("dt").innerHTML;
+
+            winname.document.write(code);
+
+            winname.document.execCommand('saveas', 'table.html');
+
+            winname.close();
+
+        }
+
+    </script>
+
+</head>
+
+<body onload="init()">
+
+<div class="container">
+
+    <ul class="ulitem">
+        <li>
+            <label>序号</label>
+
+            <input type="text" id="xuhao" class="form-control"/>
+
+        </li>
+        <li>
+            <label>广告条编码</label>
+
+            <input type="text" id="xingming" class="form-control"/>
+        </li>
+        <li>
+            <label>所在位置</label>
+
+            <input type="text" id="chuohao" class="form-control"/>
+        </li>
+        <li>
+            <label>分辨率</label>
+
+            <input type="text" id="fen" class="form-control"/>
+        </li>
+        <li>
+
+
+            <label>建议文件大小</label>
+
+            <input type="text" id="size" class="form-control"/>
+        </li>
+        <li>
+
+            <label>文件格式</label>
+
+            <input type="text" id="file" class="form-control"/>
+        </li>
+        <li>
+
+            <label>广告链接</label>
+
+            <input type="text" id="links" class="form-control"/>
+
+        </li>
+        <li>
+            <label>状态</label>
+            <input type="text" id="statuss" class="form-control"/>
+        </li>
+
+        <li>
+            <button class="btn btn-primary" type="button" onclick="dotianjia()">添加</button>
+
+            <button class="btn btn-primary" type="button" onclick="dobaocun()">保存</button>
+        </li>
+    </ul>
+
+
+    </div>
+
+    </form>
+
+</div>
+
+<div class="col-md-12">
+
+    <table class="tables" id="data">
+
+        <tr>
+            <td>序号</td>
+            <td>广告条编码</td>
+            <td>所在位置</td>
+            <td>分辨率</td>
+            <td>建议文件大小</td>
+            <td>文件格式</td>
+            <td>广告链接</td>
+            <td>状态</td>
+            <td>操作</td>
+        </tr>
+
+
+    </table>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
